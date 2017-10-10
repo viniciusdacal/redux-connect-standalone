@@ -1,4 +1,7 @@
 {
+  "presets": [
+    "react",
+  ],
   "plugins": [
     ["transform-es2015-template-literals", { "loose": true }],
     "transform-es2015-literals",

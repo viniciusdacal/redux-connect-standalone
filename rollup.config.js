@@ -6,9 +6,14 @@ import uglify from 'rollup-plugin-uglify';
 var env = process.env.NODE_ENV
 var config = {
   format: 'umd',
-  moduleName: 'ReduxArc',
-  external: ['redux'],
-  globals: { 'redux': 'Redux' },
+  moduleName: 'ReduxConnectStandalone',
+  external: ['redux', 'react-redux', 'react', 'prop-types'],
+  globals: {
+    'redux': 'redux',
+    'prop-types': 'prop-types',
+    'react-redux': 'react-redux',
+    'react': 'React',
+  },
   plugins: [
     nodeResolve({
       jsnext: true
