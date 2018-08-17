@@ -19,6 +19,8 @@ export const createConnect = store => (...configs) => (WrappedComponent) => {
   }
   const contextTypes = ConnectedComponent.contextTypes || {};
   ConnectWrapper.contextTypes = { ...contextTypes, store: object };
+  ConnectWrapper.propTypes = WrappedComponent.propTypes;
+  ConnectWrapper.defaultProps = WrappedComponent.defaultProps;
   return ConnectWrapper;
 };
 
